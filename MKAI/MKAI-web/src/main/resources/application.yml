@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: MKAI
+
+server:
+  port: 8881
