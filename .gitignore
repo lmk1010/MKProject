@@ -27,3 +27,9 @@ hs_err_pid*
 .idea/*
 *.iml
 /out/*
+
+/MKAI/.idea/*
+/MKHome/.idea/*
+/MKCenter/.idea/*
+/MKCloud/.idea/*
+/MKBase/.idea/*
