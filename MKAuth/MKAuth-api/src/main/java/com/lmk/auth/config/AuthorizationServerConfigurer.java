@@ -42,7 +42,7 @@ public class AuthorizationServerConfigurer extends AuthorizationServerConfigurer
         clients.inMemory().withClient("client")
                 .secret("123456").scopes("read").authorizedGrantTypes("authorization_code")
                 //给客户端返回认证成功的回调url
-                .redirectUris("https://www.getpostman.com/oauth2/callback");
+                .redirectUris("http://localhost:8881/oauth2/callback");
     }
 
     @Override

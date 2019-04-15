@@ -4,13 +4,11 @@ spring:
 
 server:
   port: 8881
-  servlet:
-    context-path: /api
-logging:
-  level:
-    org.springframework.security: DEBUG
-security:
-  oauth2:
-    resource:
-      serviceId: ${PREFIX:}resource
-      filter-order: 3
+
+#logging:
+#  level:
+#    org.springframework.security: DEBUG
+#security:
+#  oauth2:
+#    resource:
+#      serviceId: ${PREFIX:}resource

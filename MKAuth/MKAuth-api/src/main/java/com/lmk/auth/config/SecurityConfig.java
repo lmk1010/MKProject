@@ -10,6 +10,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 /**
  * @ClassName SecurityConfig
@@ -27,9 +28,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         //设置授权存储对象信息 目前测试使用内存存储 后期改为JDBC数据库读取存储
         //类似Shiro的Realm数据源配置
-        auth.inMemoryAuthentication().withUser("lmk1010")
-                .password("1010")
-                .roles("admin");
+        auth.inMemoryAuthentication().passwordEncoder(new BCryptPasswordEncoder())
+                .withUser("lmk1010").password(new BCryptPasswordEncoder().encode("1010"))
+                .roles("USER");
     }
 
     @Override
