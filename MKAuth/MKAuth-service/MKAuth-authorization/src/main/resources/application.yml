@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: MKAuthServer
+
+server:
+  port: 8881
+logging:
+  level:
+    web: debug
